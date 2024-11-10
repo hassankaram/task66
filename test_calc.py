@@ -1,18 +1,12 @@
 import unittest
+from calc import add
 
-class TestAddNumbers(unittest.TestCase):
-    
-    def test_add_positive_numbers(self):
-        self.assertEqual(add(2, 3), 5)
-        
-    def test_add_negative_numbers(self):
-        self.assertEqual(add(-2, -3), -5)
-        
-    def test_add_mixed_numbers(self):
-        self.assertEqual(add(2, -3), -1)
-        
-    def test_add_zero(self):
-        self.assertEqual(add(0, 5), 5)
+class TestCalc(unittest.TestCase):
+    def test_add(self):
+        self.assertEqual(add(3, 3), 6)
+        self.assertEqual(add(-1, -3), -4)
+        self.assertEqual(add(0, 0), 0)
+        self.assertEqual(add(-1, 2), 1)
 
-if __name__ == '_main_':
+if __name__== '__main__':
     unittest.main()
