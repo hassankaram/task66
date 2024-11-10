@@ -14,5 +14,5 @@ class TestAddNumbers(unittest.TestCase):
     def test_add_zero(self):
         self.assertEqual(add_numbers(0, 5), 5)
 
-if _name_ == '_main_':
+if __name__ == '_main_':
     unittest.main()
